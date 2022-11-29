@@ -1,6 +1,6 @@
 # Handwritten Number Recognition  
 
-* This project is a assginment from SI100B(<u>_Shanghaitech University_</u>).
+This project is an assginment from SI100B(<u>_Shanghaitech University_</u>).
 
 ----------
 
@@ -45,6 +45,6 @@ In this project, we will try to perform simple recognition of handwritten number
 
     ![pic of Rasp_pi](https://gitee.com/zivmax/pics/raw/github/pic-of-Rasp_pi.jpg)
 
-## Hardwares We Used
+## the Hardwares We Used
 
 ![hardwares we used](https://gitee.com/zivmax/pics/raw/github/hardware-we-used.jpg)
