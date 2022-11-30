@@ -2,7 +2,7 @@
 
 This project is an assginment from SI100B(<u>_Shanghaitech University_</u>).
 
-* * *
+----------
 
 ## Description of This Project
 
