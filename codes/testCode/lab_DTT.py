@@ -35,6 +35,6 @@ GPIO.output(F, True)
 GPIO.output(G, True)
 GPIO.output(DP, True)
 
-time.sleep(2)
+time.sleep(10)
 
 GPIO.cleanup()
