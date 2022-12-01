@@ -40,7 +40,6 @@ def display0():
 
     time.sleep(5)
 
-    GPIO.cleanup()
 
 
 def display1():
