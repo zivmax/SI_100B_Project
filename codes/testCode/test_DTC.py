@@ -1,4 +1,3 @@
-import RPi.GPIO as GPIO
 import time
 import digital_tube_control as dtc
 
