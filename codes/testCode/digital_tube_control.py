@@ -12,19 +12,6 @@ F = 18
 G = 21
 DP = 22
 
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(DCC, GPIO.OUT)
-GPIO.setup(A, GPIO.OUT)
-GPIO.setup(B, GPIO.OUT)
-GPIO.setup(C, GPIO.OUT)
-GPIO.setup(D, GPIO.OUT)
-GPIO.setup(E, GPIO.OUT)
-GPIO.setup(F, GPIO.OUT)
-GPIO.setup(G, GPIO.OUT)
-GPIO.setup(DP, GPIO.OUT)   
-
-
 
 def display0():
 
@@ -50,7 +37,7 @@ def display0():
     GPIO.output(G, False)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanup()
 
@@ -79,7 +66,7 @@ def display1():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanup()
 
@@ -108,7 +95,7 @@ def display2():
     GPIO.output(G, False)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanup()
 
@@ -137,7 +124,7 @@ def display3():
     GPIO.output(G, False)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanup()
 
@@ -166,7 +153,7 @@ def display4():
     GPIO.output(G, False)
     GPIO.output(DP, False)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanup()
 
@@ -195,7 +182,7 @@ def display5():
     GPIO.output(G, False)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanup()
 
@@ -224,7 +211,7 @@ def display6():
     GPIO.output(G, False)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanup()
 
@@ -253,7 +240,7 @@ def display7():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanup()
 
@@ -282,7 +269,7 @@ def display8():
     GPIO.output(G, False)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanup()
 
@@ -311,6 +298,6 @@ def display9():
     GPIO.output(G, False)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(2)
 
     GPIO.cleanupdisplay
