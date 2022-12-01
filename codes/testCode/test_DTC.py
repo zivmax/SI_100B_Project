@@ -4,6 +4,8 @@ import time
 
 def main():
 
+    dtc.setup()
+
     dtc.display0()
     time.sleep(1)
 
