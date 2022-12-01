@@ -2,8 +2,12 @@ import RPi.GPIO as GPIO
 import time
 
 
+# backup the code
+"""
 def setup():
-    
+
+
+
     DCC = 7
     A = 11
     B = 12
@@ -24,7 +28,8 @@ def setup():
     GPIO.setup(E, GPIO.OUT)
     GPIO.setup(F, GPIO.OUT)
     GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)
+    GPIO.setup(DP, GPIO.OUT)   
+"""
 
 
 def display0():
@@ -197,4 +202,5 @@ def display9():
     GPIO.cleanupdisplay
 
 
-
+if __name__ == "__main__":
+    main()
