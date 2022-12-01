@@ -5,7 +5,7 @@ import time
 def main():
 
     dtc.display0()
-    time.sleep(6)
+    time.sleep(7)
 
     dtc.display1()
     time.sleep(6)
