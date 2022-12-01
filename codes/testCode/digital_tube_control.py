@@ -3,6 +3,7 @@ import time
 
 
 def setup():
+    
     DCC = 7
     A = 11
     B = 12
