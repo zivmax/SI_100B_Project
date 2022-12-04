@@ -19,13 +19,13 @@ GPIO.setwarnings(False)
 # get the project path
 PRJ_PATH = os.getcwd()
 
-def image_split_column(img:np.ndarray)->list:
+def image_split_column(a)->list:
     """
-    Function description: Splite the image by column. 
+    Function description: Split the image by column.
     Tips:
     1. Calculate the number of elements with a value of 255 in each column.
     2. When the number of 255 changes from zero to non-zero, it indicates the beginning of the digits area. Use startList to record the starting column index.
-    3. When the number of 255 changes from non-zero to zero, it indicates the end of the digits area. Use endList to recorder the end column index.
+    3. When the number of 255 changes from non-zero to zero, it indicates the end of the digits area. Use endList to record the end column index.
     4. Use flag to represent the current state, outside or inside the digits area.
     
     :param img: input image to be splited by column.
@@ -34,19 +34,43 @@ def image_split_column(img:np.ndarray)->list:
     
     ### write your codes here ###
     #############################
-    
-    
-    
-    
-    
-    ret = None
+    n = 0
+    white = []
+    black = []
+    white_max = 0
+    black_max = 0
+    (height, width) = a.shape
+    startList = []
+    endList = []
+    ret = []
+    for i in range(width):
+        s = 0
+        t = 0
+        for j in range(height):
+            if a[j][i] == 255:
+                s += 1
+            if a[j][i] == 0:
+                t += 1
+        white_max = max(white_max, s)
+        black_max = max(black_max, t)
+        white.append(s)
+        black.append(t)
+    for j in range(0, len(a)-1):
+        if a[j] == 0 and a[j+1] != 0:
+            startList.append(j)
+    for k in range(0, len(a)-1):
+        if a[k] != 0 and a[k+1] == 0:
+            endList.append(k)
+    for l in range(0, len(startlist)):
+        ret.append(a[startList[l]:endList[l], :])
+
     return ret
 
 
 
-def image_split_row(img:np.ndarray)->list:
+def image_split_row(a)->list:
     """
-    Function description: Splite the image by row. 
+    Function description: Split the image by row.
     Tips:
     1. Calculate the number of elements with a value of 255 in each row.
     2. When the number of 255 changes from zero to non-zero, it indicates the beginning of the digits area. Use startList to record the starting row index.
@@ -59,13 +83,24 @@ def image_split_row(img:np.ndarray)->list:
     
     ### write your codes here ###
     #############################
-    
-    
-    
-     
-    
-    ret = None
+    n = 0
+    startList = []
+    endList = []
+    ret = []
+    for i in a:
+        if i == 255:
+            n += 1
+    for j in range(0, len(a) - 1):
+        if a[j] == 0 and a[j + 1] != 0:
+            startList.append(j)
+    for k in range(0, len(a) - 1):
+        if a[k] != 0 and a[k + 1] == 0:
+            endList.append(k)
+    for l in range(0, len(startlist)):
+        ret.append(a[:, startList[l]:endList[l]])
+
     return ret
+
 
 
 
@@ -83,8 +118,7 @@ def led_display(numList:list)->None:
     """
 
     ### write your codes here ###
-    #############################
-    # step 1:
+    #############################87----    # step 1:
     # Clarify the relationship between led pins and GPIO pins
     # Set the GPIO pins to GPIO.OUT mode and give them the right output
     
