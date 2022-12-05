@@ -6,51 +6,59 @@ BtnPin = 12    # pin12 --- button
 
 Led_status = 1
 
+
 def setup():
 
-	GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
+    GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
 
-	GPIO.setup(LedPin, GPIO.OUT)   # Set LedPin's mode is output
+    GPIO.setup(LedPin, GPIO.OUT)   # Set LedPin's mode is output
 
-	GPIO.setup(BtnPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)    # Set BtnPin's mode is input, and pull up to high level(3.3V)
+    # Set BtnPin's mode is input, and pull up to high level(3.3V)
+    GPIO.setup(BtnPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-	GPIO.output(LedPin, GPIO.HIGH) # Set LedPin high(+3.3V) to off led
+    GPIO.output(LedPin, GPIO.HIGH)  # Set LedPin high(+3.3V) to off led
+
 
 def swLed(ev=None):
 
-	global Led_status
+    global Led_status
 
-	Led_status = not Led_status
+    Led_status = not Led_status
 
-	GPIO.output(LedPin, Led_status)  # switch led status(on-->off; off-->on)
+    GPIO.output(LedPin, Led_status)  # switch led status(on-->off; off-->on)
 
-	if Led_status == 1:
+    if Led_status == 1:
 
-		print ('led off...')
+        print('led off...')
 
-	else:
+    else:
 
-	print ('...led on')
+    	print('...led on')
+
 
 def loop():
 
-	GPIO.add_event_detect(BtnPin, GPIO.FALLING, calCLEARlback=swLed) # wait for falling
-
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING,
+                          calCLEARlback=swLed)  # wait for falling
+    while True:
+        pass
 
 def destroy():
 
-	GPIO.output(LedPin, GPIO.HIGH)     # led off
+    GPIO.output(LedPin, GPIO.HIGH)     # led off
 
-	GPIO.cleanup()                     # Release resource
+    GPIO.cleanup()                     # Release resource
+
 
 if __name__ == '__main__':     # Program start from here
 
-	setup()
+    setup()
 
-	try:
+    try:
 
-		loop()
+        loop()
 
-	except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+    # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+    except KeyboardInterrupt:
 
-		destroy()
+        destroy()
