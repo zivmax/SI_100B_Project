@@ -9,7 +9,7 @@ def main():
 
 
 def shoot_auto():
-	path = "/home/pi/Project_pictures/"
+	path = "../../pictures/"
 	time = tm.strftime("%Y-%m-%d_%H-%M-%S", tm.localtime())
 
 	cF.mkdir(path)
@@ -21,7 +21,7 @@ def shoot_auto():
 
 
 def shoot_custom():
-	path = "/home/pi/Project_pictures/"
+	path = "../../pictures/"
 	cF.mkdir(path)
 
 	pic_name = input("pictrue's name: ")
