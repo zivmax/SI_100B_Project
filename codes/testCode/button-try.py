@@ -39,8 +39,7 @@ def swLed(ev=None):
 def loop():
 
     GPIO.add_event_detect(BtnPin, GPIO.FALLING, calCLEARlback=swLed)  # wait for falling
-    while True:
-        pass
+
 
 def destroy():
 
