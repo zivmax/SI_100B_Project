@@ -57,8 +57,7 @@ def image_split_column(a)->list:
             if end - start > 10:
                 cut = a[:, start - 30:end + 30]
                 ret.append(cut)
-                cv2.imshow('caijian', cut)
-                cv2.waitKey(0)
+
 
     return ret
 
@@ -116,9 +115,7 @@ def image_split_row(a)->list:
             if end - start > 10:
                 cut = a[:, start - 30:end + 30]
                 ret.append(cut.T)
-                cv2.imshow('caijian', cut.T)
-                cv2.waitKey(0)
-
+                
     return ret
 
 
