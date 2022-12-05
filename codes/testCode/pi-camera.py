@@ -1,7 +1,37 @@
 import picamera as piC
+import createFolder as cF
+import time as tm
 
-camera = piC.PicCamera()
 
-camera.capture("/home/pi/Project_pictures/test.jpg")
+def main():
+	shoot_auto()
+	shoot_custom()
 
-camera.close()
+
+def shoot_auto():
+	path = "/home/pi/Project_pictures/"
+	time = tm.strftime("%Y-%m-%d_%H-%M-%S", tm.localtime())
+
+	cF.mkdir(path)
+
+	camera = piC.PiCamera()
+	camera.capture(path + "pic_" + time + ".jpg")
+
+	camera.close()
+
+
+def shoot_custom():
+	path = "/home/pi/Project_pictures/"
+	cF.mkdir(path)
+
+	pic_name = input("pictrue's name: ")
+	pic_type = input("Picture's format: ")
+
+
+	camera = piC.PiCamera()
+	camera.capture(path + pic_name + "." + pic_type)
+
+	camera.close()
+
+if __name__ == "__main__":
+	main()
