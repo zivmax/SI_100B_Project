@@ -45,17 +45,17 @@ def image_split_column(a)->list:
     n = 1
     while n < width - 2:
         n += 1
-        if endList[n] > 0.01 * black_max:
+        if startList[n] > 0.005 * white_max:
             start = n
             for m in range(start + 1, width - 1):
-                if startList[m] > 0.99 * white_max:  # 0.95这个参数请多调整，对应下面的0.05
+                if endList[m] > 0.995 * black_max: 
                     end = m
                     break
                 else:
                     end = start+1
             n = end
             if end - start > 10:
-                cut = a[:, start - 30:end + 30]
+                cut = a[:, start - 20:end + 20]
                 ret.append(cut)
 
 
@@ -103,17 +103,17 @@ def image_split_row(a)->list:
     n = 1
     while n < width - 2:
         n += 1
-        if endList[n] > 0.01 * black_max:
+        if startList[n] > 0.005 * white_max:
             start = n
             for m in range(start + 1, width - 1):
-                if startList[m] > 0.99 * white_max:  # 0.95这个参数请多调整，对应下面的0.05
+                if endList[m] > 0.995 * black_max: 
                     end = m
                     break
                 else:
                     end = start+1
             n = end
             if end - start > 10:
-                cut = a[:, start - 30:end + 30]
+                cut = a[:, start - 20:end + 20]
                 ret.append(cut.T)
                 
     return ret
