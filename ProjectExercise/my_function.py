@@ -27,10 +27,10 @@ def image_split_column(a)->list:
     width = a.shape[1]
     white_max = 0
     black_max = 0
-    # 计算每一列的黑白色像素总和
+
     for i in range(width):
-        s = 0  # 这一列白色总数
-        t = 0  # 这一列黑色总数
+        s = 0
+        t = 0
         for j in range(height):
             if a[j][i] == 255:
                 s += 1
@@ -87,10 +87,9 @@ def image_split_row(a)->list:
     width = a.shape[1]
     white_max = 0
     black_max = 0
-    # 计算每一列的黑白色像素总和
     for i in range(width):
-        s = 0  # 这一列白色总数
-        t = 0  # 这一列黑色总数
+        s = 0
+        t = 0
         for j in range(height):
             if a[j][i] == 255:
                 s += 1
