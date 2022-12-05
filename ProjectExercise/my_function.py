@@ -20,32 +20,17 @@ GPIO.setwarnings(False)
 PRJ_PATH = os.getcwd()
 
 def image_split_column(a)->list:
-    """
-    Function description: Split the image by column.
-    Tips:
-    1. Calculate the number of elements with a value of 255 in each column.
-    2. When the number of 255 changes from zero to non-zero, it indicates the beginning of the digits area. Use startList to record the starting column index.
-    3. When the number of 255 changes from non-zero to zero, it indicates the end of the digits area. Use endList to record the end column index.
-    4. Use flag to represent the current state, outside or inside the digits area.
-    
-    :param img: input image to be splited by column.
-    :return: output image after splited by column. It is a list, but its elements are np.ndarray.
-    """
-    
-    ### write your codes here ###
-    #############################
-    n = 0
-    white = []
-    black = []
-    white_max = 0
-    black_max = 0
-    (height, width) = a.shape
+    ret = []
     startList = []
     endList = []
-    ret = []
+    height = a.shape[0]
+    width = a.shape[1]
+    white_max = 0
+    black_max = 0
+    # 计算每一列的黑白色像素总和
     for i in range(width):
-        s = 0
-        t = 0
+        s = 0  # 这一列白色总数
+        t = 0  # 这一列黑色总数
         for j in range(height):
             if a[j][i] == 255:
                 s += 1
@@ -53,16 +38,27 @@ def image_split_column(a)->list:
                 t += 1
         white_max = max(white_max, s)
         black_max = max(black_max, t)
-        white.append(s)
-        black.append(t)
-    for j in range(0, len(a)-1):
-        if a[j] == 0 and a[j+1] != 0:
-            startList.append(j)
-    for k in range(0, len(a)-1):
-        if a[k] != 0 and a[k+1] == 0:
-            endList.append(k)
-    for l in range(0, len(startlist)):
-        ret.append(a[startList[l]:endList[l], :])
+        startList.append(s)
+        endList.append(t)
+
+
+    n = 1
+    while n < width - 2:
+        n += 1
+        if endList[n] > 0.01 * black_max:
+            start = n
+            for m in range(start + 1, width - 1):
+                if startList[m] > 0.99 * white_max:  # 0.95这个参数请多调整，对应下面的0.05
+                    end = m
+                    break
+                else:
+                    end = start+1
+            n = end
+            if end - start > 10:
+                cut = a[:, start - 30:end + 30]
+                ret.append(cut)
+                cv2.imshow('caijian', cut)
+                cv2.waitKey(0)
 
     return ret
 
@@ -83,24 +79,48 @@ def image_split_row(a)->list:
     
     ### write your codes here ###
     #############################
-    n = 0
+    a = a.T
+    ret = []
     startList = []
     endList = []
-    ret = []
-    for i in a:
-        if i == 255:
-            n += 1
-    for j in range(0, len(a) - 1):
-        if a[j] == 0 and a[j + 1] != 0:
-            startList.append(j)
-    for k in range(0, len(a) - 1):
-        if a[k] != 0 and a[k + 1] == 0:
-            endList.append(k)
-    for l in range(0, len(startlist)):
-        ret.append(a[:, startList[l]:endList[l]])
+    height = a.shape[0]
+    width = a.shape[1]
+    white_max = 0
+    black_max = 0
+    # 计算每一列的黑白色像素总和
+    for i in range(width):
+        s = 0  # 这一列白色总数
+        t = 0  # 这一列黑色总数
+        for j in range(height):
+            if a[j][i] == 255:
+                s += 1
+            if a[j][i] == 0:
+                t += 1
+        white_max = max(white_max, s)
+        black_max = max(black_max, t)
+        startList.append(s)
+        endList.append(t)
+
+
+    n = 1
+    while n < width - 2:
+        n += 1
+        if endList[n] > 0.01 * black_max:
+            start = n
+            for m in range(start + 1, width - 1):
+                if startList[m] > 0.99 * white_max:  # 0.95这个参数请多调整，对应下面的0.05
+                    end = m
+                    break
+                else:
+                    end = start+1
+            n = end
+            if end - start > 10:
+                cut = a[:, start - 30:end + 30]
+                ret.append(cut.T)
+                cv2.imshow('caijian', cut.T)
+                cv2.waitKey(0)
 
     return ret
-
 
 
 
