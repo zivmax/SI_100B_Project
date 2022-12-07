@@ -54,8 +54,7 @@ def refresh(t = 0.1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 
@@ -86,8 +85,7 @@ def check(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 
@@ -118,8 +116,7 @@ def display0(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 def display1(t = 1):
@@ -149,8 +146,7 @@ def display1(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 def display2(t = 1):
@@ -180,8 +176,7 @@ def display2(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 
@@ -212,8 +207,7 @@ def display3(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 
@@ -244,8 +238,7 @@ def display4(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 
@@ -276,8 +269,7 @@ def display5(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 
@@ -308,8 +300,7 @@ def display6(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 
@@ -340,8 +331,7 @@ def display7(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 
@@ -372,8 +362,7 @@ def display8(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
 
 
 
@@ -404,5 +393,4 @@ def display9(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-
-    time.sleep(0.1)
+    
