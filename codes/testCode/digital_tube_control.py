@@ -217,6 +217,8 @@ def display4(t = 1):
     G = 29
     DP = 22
 
+    setup()
+
     GPIO.output(DCC, True)
     GPIO.output(A, True)
     GPIO.output(B, False)
