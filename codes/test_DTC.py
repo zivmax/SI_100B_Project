@@ -5,7 +5,6 @@ import RPi.GPIO as GPIO
 
 def main():
 
-    dtc.check()
 
     dtc.setup()
     dtc.display0()
