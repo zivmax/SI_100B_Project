@@ -2,13 +2,7 @@ import RPi.GPIO as GPIO
 import time
 
 
-C = 13
-D = 15
-E = 16
-F = 18
-G = 21
-
-def steup():
+def setup():
 
     DCC = 7
     A = 11
@@ -17,7 +11,7 @@ def steup():
     D = 15
     E = 16
     F = 18
-    G = 21
+    G = 29
     DP = 22
 
     GPIO.setwarnings(False)
@@ -33,7 +27,40 @@ def steup():
     GPIO.setup(DP, GPIO.OUT)
 
 
+def refresh():
+
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
+
+    GPIO.output(DCC, False)
+    GPIO.output(A, True)
+    GPIO.output(B, True)
+    GPIO.output(C, True)
+    GPIO.output(D, True)
+    GPIO.output(E, True)
+    GPIO.output(F, True)
+    GPIO.output(G, True)
+    GPIO.output(DP, True)
+
+
 def display0():
+
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -43,13 +70,23 @@ def display0():
     GPIO.output(E, False)
     GPIO.output(F, False)
     GPIO.output(G, True)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
     time.sleep(5)
 
 
-
 def display1():
+
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
+
 
     GPIO.output(DCC, True)
     GPIO.output(A, True)
@@ -59,12 +96,22 @@ def display1():
     GPIO.output(E, True)
     GPIO.output(F, True)
     GPIO.output(G, True)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
     time.sleep(5)
 
 
-def Act2():
+def display2():
+
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -82,6 +129,16 @@ def Act2():
 
 def display3():
 
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
+
     GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
@@ -97,6 +154,16 @@ def display3():
 
 
 def display4():
+
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
 
     GPIO.output(DCC, True)
     GPIO.output(A, True)
@@ -114,6 +181,16 @@ def display4():
 
 def display5():
 
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
+
     GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, True)
@@ -129,6 +206,16 @@ def display5():
 
 
 def display6():
+
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -146,6 +233,16 @@ def display6():
 
 def display7():
 
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
+
     GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
@@ -162,6 +259,16 @@ def display7():
 
 def display8():
 
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
+
     GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
@@ -177,6 +284,16 @@ def display8():
 
 
 def display9():
+
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
