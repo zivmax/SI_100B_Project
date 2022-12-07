@@ -7,24 +7,34 @@ def main():
 
     check()
 
+    refresh()
     display0()
 
+    refresh()
     display1()
 
+    refresh()
     display2()
 
+    refresh()
     display3()
 
+    refresh()
     display4()
 
+    refresh()
     display5()
 
+    refresh()
     display6()
 
+    refresh()
     display7()
 
+    refresh()
     display8()
 
+    refresh()
     display9()
 
 
@@ -55,7 +65,7 @@ def setup():
     GPIO.setup(DP, GPIO.OUT)
 
 
-def refresh(t = 0.1):
+def refresh(t = 0):
 
     DCC = 7
     A = 11
