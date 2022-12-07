@@ -11,7 +11,7 @@ def main():
     GPIO.cleanup()
 
     dtc.setup()
-    dtc.display3()
+    dtc.display1()
     time.sleep(3)
     GPIO.cleanup()
 
