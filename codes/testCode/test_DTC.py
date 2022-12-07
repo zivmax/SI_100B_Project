@@ -3,7 +3,7 @@ import digital_tube_control as dtc
 
 
 def main():
-    
+
 
     dtc.display0()
     time.sleep(1)

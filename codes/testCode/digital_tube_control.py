@@ -2,18 +2,23 @@ import RPi.GPIO as GPIO
 import time
 
 
-DCC = 7
-A = 11
-B = 12
 C = 13
 D = 15
 E = 16
 F = 18
 G = 21
-DP = 22
 
+def steup():
 
-def display0():
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 21
+    DP = 22
 
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BOARD)
@@ -25,7 +30,10 @@ def display0():
     GPIO.setup(E, GPIO.OUT)
     GPIO.setup(F, GPIO.OUT)
     GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
+    GPIO.setup(DP, GPIO.OUT)
+
+
+def display0():
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -34,27 +42,14 @@ def display0():
     GPIO.output(D, False)
     GPIO.output(E, False)
     GPIO.output(F, False)
-    GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(G, True)
+    GPIO.output(DP, False)
 
-    time.sleep(2)
+    time.sleep(5)
 
-    GPIO.cleanup()
 
 
 def display1():
-
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
-    GPIO.setup(A, GPIO.OUT)
-    GPIO.setup(B, GPIO.OUT)
-    GPIO.setup(C, GPIO.OUT)
-    GPIO.setup(D, GPIO.OUT)
-    GPIO.setup(E, GPIO.OUT)
-    GPIO.setup(F, GPIO.OUT)
-    GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
 
     GPIO.output(DCC, True)
     GPIO.output(A, True)
@@ -64,26 +59,12 @@ def display1():
     GPIO.output(E, True)
     GPIO.output(F, True)
     GPIO.output(G, True)
-    GPIO.output(DP, True)
+    GPIO.output(DP, False)
 
-    time.sleep(2)
-
-    GPIO.cleanup()
+    time.sleep(5)
 
 
-def display2():
-
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
-    GPIO.setup(A, GPIO.OUT)
-    GPIO.setup(B, GPIO.OUT)
-    GPIO.setup(C, GPIO.OUT)
-    GPIO.setup(D, GPIO.OUT)
-    GPIO.setup(E, GPIO.OUT)
-    GPIO.setup(F, GPIO.OUT)
-    GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
+def Act2():
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -93,26 +74,13 @@ def display2():
     GPIO.output(E, False)
     GPIO.output(F, True)
     GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DP, False)
 
-    time.sleep(2)
+    time.sleep(5)
 
-    GPIO.cleanup()
 
 
 def display3():
-
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
-    GPIO.setup(A, GPIO.OUT)
-    GPIO.setup(B, GPIO.OUT)
-    GPIO.setup(C, GPIO.OUT)
-    GPIO.setup(D, GPIO.OUT)
-    GPIO.setup(E, GPIO.OUT)
-    GPIO.setup(F, GPIO.OUT)
-    GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -122,26 +90,13 @@ def display3():
     GPIO.output(E, True)
     GPIO.output(F, True)
     GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DP, False)
 
-    time.sleep(2)
+    time.sleep(5)
 
-    GPIO.cleanup()
 
 
 def display4():
-
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
-    GPIO.setup(A, GPIO.OUT)
-    GPIO.setup(B, GPIO.OUT)
-    GPIO.setup(C, GPIO.OUT)
-    GPIO.setup(D, GPIO.OUT)
-    GPIO.setup(E, GPIO.OUT)
-    GPIO.setup(F, GPIO.OUT)
-    GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
 
     GPIO.output(DCC, True)
     GPIO.output(A, True)
@@ -153,24 +108,11 @@ def display4():
     GPIO.output(G, False)
     GPIO.output(DP, False)
 
-    time.sleep(2)
+    time.sleep(5)
 
-    GPIO.cleanup()
 
 
 def display5():
-
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
-    GPIO.setup(A, GPIO.OUT)
-    GPIO.setup(B, GPIO.OUT)
-    GPIO.setup(C, GPIO.OUT)
-    GPIO.setup(D, GPIO.OUT)
-    GPIO.setup(E, GPIO.OUT)
-    GPIO.setup(F, GPIO.OUT)
-    GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -180,26 +122,13 @@ def display5():
     GPIO.output(E, True)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DP, False)
 
-    time.sleep(2)
+    time.sleep(5)
 
-    GPIO.cleanup()
 
 
 def display6():
-
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
-    GPIO.setup(A, GPIO.OUT)
-    GPIO.setup(B, GPIO.OUT)
-    GPIO.setup(C, GPIO.OUT)
-    GPIO.setup(D, GPIO.OUT)
-    GPIO.setup(E, GPIO.OUT)
-    GPIO.setup(F, GPIO.OUT)
-    GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -209,26 +138,13 @@ def display6():
     GPIO.output(E, False)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DP, False)
 
-    time.sleep(2)
+    time.sleep(5)
 
-    GPIO.cleanup()
 
 
 def display7():
-
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
-    GPIO.setup(A, GPIO.OUT)
-    GPIO.setup(B, GPIO.OUT)
-    GPIO.setup(C, GPIO.OUT)
-    GPIO.setup(D, GPIO.OUT)
-    GPIO.setup(E, GPIO.OUT)
-    GPIO.setup(F, GPIO.OUT)
-    GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -238,26 +154,13 @@ def display7():
     GPIO.output(E, True)
     GPIO.output(F, True)
     GPIO.output(G, True)
-    GPIO.output(DP, True)
+    GPIO.output(DP, False)
 
-    time.sleep(2)
+    time.sleep(5)
 
-    GPIO.cleanup()
 
 
 def display8():
-
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
-    GPIO.setup(A, GPIO.OUT)
-    GPIO.setup(B, GPIO.OUT)
-    GPIO.setup(C, GPIO.OUT)
-    GPIO.setup(D, GPIO.OUT)
-    GPIO.setup(E, GPIO.OUT)
-    GPIO.setup(F, GPIO.OUT)
-    GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -267,26 +170,13 @@ def display8():
     GPIO.output(E, False)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DP, False)
 
-    time.sleep(2)
+    time.sleep(5)
 
-    GPIO.cleanup()
 
 
 def display9():
-
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
-    GPIO.setup(A, GPIO.OUT)
-    GPIO.setup(B, GPIO.OUT)
-    GPIO.setup(C, GPIO.OUT)
-    GPIO.setup(D, GPIO.OUT)
-    GPIO.setup(E, GPIO.OUT)
-    GPIO.setup(F, GPIO.OUT)
-    GPIO.setup(G, GPIO.OUT)
-    GPIO.setup(DP, GPIO.OUT)   
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
@@ -296,8 +186,6 @@ def display9():
     GPIO.output(E, True)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DP, False)
 
-    time.sleep(2)
-
-    GPIO.cleanupdisplay
+    time.sleep(5)
