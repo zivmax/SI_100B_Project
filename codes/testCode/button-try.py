@@ -1,10 +1,7 @@
 import RPi.GPIO as GPIO
 
-LedPin = 11    # pin11 --- led
 
 BtnPin = 12    # pin12 --- button
-
-Led_status = 1
 
 
 def setup():
@@ -16,7 +13,6 @@ def setup():
     # Set BtnPin's mode is input, and pull up to high level(3.3V)
     GPIO.setup(BtnPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-    GPIO.output(LedPin, GPIO.HIGH)  # Set LedPin high(+3.3V) to off led
 
 
 def swLed(ev=None):
