@@ -3,38 +3,38 @@ import time
 
 def main():
 
-    refresh()
+
 
     check()
 
-    refresh()
+
     display0()
 
-    refresh()
+
     display1()
 
-    refresh()
+
     display2()
 
-    refresh()
+
     display3()
 
-    refresh()
+
     display4()
 
-    refresh()
+
     display5()
 
-    refresh()
+
     display6()
 
-    refresh()
+
     display7()
 
-    refresh()
+
     display8()
 
-    refresh()
+
     display9()
 
 
