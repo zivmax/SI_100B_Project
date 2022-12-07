@@ -69,7 +69,7 @@ def check(t = 1):
     G = 29
     DP = 22
 
-    setup()
+    dtc.setup()
 
     GPIO.output(DCC, True)
     GPIO.output(A, False)
