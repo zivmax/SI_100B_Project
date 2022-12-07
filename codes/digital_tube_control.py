@@ -72,7 +72,7 @@ def display0():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(1)
 
 
 def display1():
@@ -98,7 +98,7 @@ def display1():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(1)
 
 
 def display2():
@@ -123,7 +123,7 @@ def display2():
     GPIO.output(G, False)
     GPIO.output(DP, False)
 
-    time.sleep(5)
+    time.sleep(1)
 
 
 
@@ -149,7 +149,7 @@ def display3():
     GPIO.output(G, False)
     GPIO.output(DP, False)
 
-    time.sleep(5)
+    time.sleep(1)
 
 
 
@@ -175,7 +175,7 @@ def display4():
     GPIO.output(G, False)
     GPIO.output(DP, False)
 
-    time.sleep(5)
+    time.sleep(1)
 
 
 
@@ -201,7 +201,7 @@ def display5():
     GPIO.output(G, False)
     GPIO.output(DP, False)
 
-    time.sleep(5)
+    time.sleep(1)
 
 
 
@@ -227,7 +227,7 @@ def display6():
     GPIO.output(G, False)
     GPIO.output(DP, False)
 
-    time.sleep(5)
+    time.sleep(1)
 
 
 
@@ -253,7 +253,7 @@ def display7():
     GPIO.output(G, True)
     GPIO.output(DP, False)
 
-    time.sleep(5)
+    time.sleep(1)
 
 
 
@@ -279,7 +279,7 @@ def display8():
     GPIO.output(G, False)
     GPIO.output(DP, False)
 
-    time.sleep(5)
+    time.sleep(1)
 
 
 
@@ -305,4 +305,4 @@ def display9():
     GPIO.output(G, False)
     GPIO.output(DP, False)
 
-    time.sleep(5)
+    time.sleep(1)
