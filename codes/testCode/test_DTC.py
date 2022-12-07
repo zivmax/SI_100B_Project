@@ -7,35 +7,51 @@ def main():
 
     dtc.setup()
 
+    dtc.refresh()
+
     dtc.display0()
-    time.sleep(1)
+    time.sleep(3)
+
+    GPIO.cleanup()
+    dtc.setup()
 
     dtc.display1()
-    time.sleep(1)
+    time.sleep(3)
+
+
+    GPIO.cleanup()
+    dtc.setup()
+
 
     dtc.display2()
-    time.sleep(1)
+    time.sleep(3)
+
+
+    GPIO.cleanup()
+    dtc.setup()
+
 
     dtc.display3()
-    time.sleep(1)
+    time.sleep(3)
+
+
+    GPIO.cleanup()
+    dtc.setup()
 
     dtc.display4()
-    time.sleep(1)
+
+    GPIO.cleanup()
+    dtc.setup()
 
     dtc.display5()
-    time.sleep(1)
 
     dtc.display6()
-    time.sleep(1)
 
     dtc.display7()
-    time.sleep(1)
 
     dtc.display8()
-    time.sleep(1)
 
     dtc.display9()
-    time.sleep(1)
 
     GPIO.cleanup()
 
