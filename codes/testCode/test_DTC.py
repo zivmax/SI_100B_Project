@@ -8,23 +8,23 @@ def main():
     dtc.check()
 
     dtc.display0()
-
+    time.sleep(1)
     dtc.display1()
-
+    time.sleep(1)
     dtc.display2()
-
+    time.sleep(1)
     dtc.display3()
-
+    time.sleep(1)
     dtc.display4()
-
+    time.sleep(1)
     dtc.display5()
-
+    time.sleep(1)
     dtc.display6()
-
+    time.sleep(1)
     dtc.display7()
-
+    time.sleep(1)
     dtc.display8()
-
+    time.sleep(1)
     dtc.display9()
 
 
