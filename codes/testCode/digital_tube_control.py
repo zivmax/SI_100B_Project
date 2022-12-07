@@ -41,15 +41,15 @@ def refresh(t = 0.1):
 
 
 
-    GPIO.output(DCC, False)
-    GPIO.output(A, True)
-    GPIO.output(B, True)
-    GPIO.output(C, True)
-    GPIO.output(D, True)
-    GPIO.output(E, True)
-    GPIO.output(F, True)
-    GPIO.output(G, True)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.LOW)
+    GPIO.output(A, GPIO.HIGH)
+    GPIO.output(B, GPIO.HIGH)
+    GPIO.output(C, GPIO.HIGH)
+    GPIO.output(D, GPIO.HIGH)
+    GPIO.output(E, GPIO.HIGH)
+    GPIO.output(F, GPIO.HIGH)
+    GPIO.output(G, GPIO.HIGH)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -69,15 +69,15 @@ def check(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, False)
-    GPIO.output(B, False)
-    GPIO.output(C, False)
-    GPIO.output(D, False)
-    GPIO.output(E, False)
-    GPIO.output(F, False)
-    GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.LOW)
+    GPIO.output(B, GPIO.LOW)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.LOW)
+    GPIO.output(E, GPIO.LOW)
+    GPIO.output(F, GPIO.LOW)
+    GPIO.output(G, GPIO.LOW)
+    GPIO.output(DP, GPIO.LOW)
 
     time.sleep(t)
 
@@ -97,15 +97,15 @@ def display0(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, False)
-    GPIO.output(B, False)
-    GPIO.output(C, False)
-    GPIO.output(D, False)
-    GPIO.output(E, False)
-    GPIO.output(F, False)
-    GPIO.output(G, True)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.LOW)
+    GPIO.output(B, GPIO.LOW)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.LOW)
+    GPIO.output(E, GPIO.LOW)
+    GPIO.output(F, GPIO.LOW)
+    GPIO.output(G, GPIO.HIGH)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -124,15 +124,15 @@ def display1(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, True)
-    GPIO.output(B, False)
-    GPIO.output(C, False)
-    GPIO.output(D, True)
-    GPIO.output(E, True)
-    GPIO.output(F, True)
-    GPIO.output(G, True)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.HIGH)
+    GPIO.output(B, GPIO.LOW)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.HIGH)
+    GPIO.output(E, GPIO.HIGH)
+    GPIO.output(F, GPIO.HIGH)
+    GPIO.output(G, GPIO.HIGH)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -151,15 +151,15 @@ def display2(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, False)
-    GPIO.output(B, False)
-    GPIO.output(C, True)
-    GPIO.output(D, False)
-    GPIO.output(E, False)
-    GPIO.output(F, True)
-    GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.LOW)
+    GPIO.output(B, GPIO.LOW)
+    GPIO.output(C, GPIO.HIGH)
+    GPIO.output(D, GPIO.LOW)
+    GPIO.output(E, GPIO.LOW)
+    GPIO.output(F, GPIO.HIGH)
+    GPIO.output(G, GPIO.LOW)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -179,15 +179,15 @@ def display3(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, False)
-    GPIO.output(B, False)
-    GPIO.output(C, False)
-    GPIO.output(D, False)
-    GPIO.output(E, True)
-    GPIO.output(F, True)
-    GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.LOW)
+    GPIO.output(B, GPIO.LOW)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.LOW)
+    GPIO.output(E, GPIO.HIGH)
+    GPIO.output(F, GPIO.HIGH)
+    GPIO.output(G, GPIO.LOW)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -205,15 +205,15 @@ def display4(t = 1):
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, True)
-    GPIO.output(B, False)
-    GPIO.output(C, False)
-    GPIO.output(D, True)
-    GPIO.output(E, True)
-    GPIO.output(F, False)
-    GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.HIGH)
+    GPIO.output(B, GPIO.LOW)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.HIGH)
+    GPIO.output(E, GPIO.HIGH)
+    GPIO.output(F, GPIO.LOW)
+    GPIO.output(G, GPIO.LOW)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -233,15 +233,15 @@ def display5(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, False)
-    GPIO.output(B, True)
-    GPIO.output(C, False)
-    GPIO.output(D, False)
-    GPIO.output(E, True)
-    GPIO.output(F, False)
-    GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.LOW)
+    GPIO.output(B, GPIO.HIGH)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.LOW)
+    GPIO.output(E, GPIO.HIGH)
+    GPIO.output(F, GPIO.LOW)
+    GPIO.output(G, GPIO.LOW)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -261,15 +261,15 @@ def display6(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, False)
-    GPIO.output(B, True)
-    GPIO.output(C, False)
-    GPIO.output(D, False)
-    GPIO.output(E, False)
-    GPIO.output(F, False)
-    GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.LOW)
+    GPIO.output(B, GPIO.HIGH)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.LOW)
+    GPIO.output(E, GPIO.LOW)
+    GPIO.output(F, GPIO.LOW)
+    GPIO.output(G, GPIO.LOW)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -289,15 +289,15 @@ def display7(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, False)
-    GPIO.output(B, False)
-    GPIO.output(C, False)
-    GPIO.output(D, True)
-    GPIO.output(E, True)
-    GPIO.output(F, True)
-    GPIO.output(G, True)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.LOW)
+    GPIO.output(B, GPIO.LOW)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.HIGH)
+    GPIO.output(E, GPIO.HIGH)
+    GPIO.output(F, GPIO.HIGH)
+    GPIO.output(G, GPIO.HIGH)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -317,15 +317,15 @@ def display8(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, False)
-    GPIO.output(B, False)
-    GPIO.output(C, False)
-    GPIO.output(D, False)
-    GPIO.output(E, False)
-    GPIO.output(F, False)
-    GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.LOW)
+    GPIO.output(B, GPIO.LOW)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.LOW)
+    GPIO.output(E, GPIO.LOW)
+    GPIO.output(F, GPIO.LOW)
+    GPIO.output(G, GPIO.LOW)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
 
@@ -345,14 +345,14 @@ def display9(t = 1):
 
 
 
-    GPIO.output(DCC, True)
-    GPIO.output(A, False)
-    GPIO.output(B, False)
-    GPIO.output(C, False)
-    GPIO.output(D, False)
-    GPIO.output(E, True)
-    GPIO.output(F, False)
-    GPIO.output(G, False)
-    GPIO.output(DP, True)
+    GPIO.output(DCC, GPIO.HIGH)
+    GPIO.output(A, GPIO.LOW)
+    GPIO.output(B, GPIO.LOW)
+    GPIO.output(C, GPIO.LOW)
+    GPIO.output(D, GPIO.LOW)
+    GPIO.output(E, GPIO.HIGH)
+    GPIO.output(F, GPIO.LOW)
+    GPIO.output(G, GPIO.LOW)
+    GPIO.output(DP, GPIO.HIGH)
 
     time.sleep(t)
