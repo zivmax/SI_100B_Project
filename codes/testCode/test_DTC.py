@@ -1,9 +1,11 @@
 import time
 import digital_tube_control as dtc
+import RPi.GPIO as GPIO
 
 
 def main():
 
+    dtc.setup()
 
     dtc.display0()
     time.sleep(1)
@@ -35,6 +37,7 @@ def main():
     dtc.display9()
     time.sleep(1)
 
+    GPIO.cleanup()
 
 if __name__ == "__main__":
     main()
