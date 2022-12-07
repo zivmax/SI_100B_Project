@@ -27,6 +27,29 @@ def setup():
     GPIO.setup(DP, GPIO.OUT)
 
 
+def refresh():
+
+    DCC = 7
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
+
+    GPIO.output(DCC, False)
+    GPIO.output(A, True)
+    GPIO.output(B, True)
+    GPIO.output(C, True)
+    GPIO.output(D, True)
+    GPIO.output(E, True)
+    GPIO.output(F, True)
+    GPIO.output(G, True)
+    GPIO.output(DP, True)
+
+
 def display0():
 
     DCC = 7
@@ -47,7 +70,7 @@ def display0():
     GPIO.output(E, False)
     GPIO.output(F, False)
     GPIO.output(G, True)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
     time.sleep(5)
 
@@ -73,7 +96,7 @@ def display1():
     GPIO.output(E, True)
     GPIO.output(F, True)
     GPIO.output(G, True)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
     time.sleep(5)
 
