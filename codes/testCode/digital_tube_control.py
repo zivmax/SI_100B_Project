@@ -49,6 +49,8 @@ def refresh():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
+    time.sleep(3)
+
 
 def display0():
 
@@ -72,7 +74,7 @@ def display0():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
 
 
 def display1():
@@ -98,7 +100,7 @@ def display1():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
 
 
 def display2():
@@ -121,9 +123,9 @@ def display2():
     GPIO.output(E, False)
     GPIO.output(F, True)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
 
 
 
@@ -147,9 +149,9 @@ def display3():
     GPIO.output(E, True)
     GPIO.output(F, True)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
 
 
 
@@ -173,9 +175,9 @@ def display4():
     GPIO.output(E, True)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
 
 
 
@@ -199,9 +201,9 @@ def display5():
     GPIO.output(E, True)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
 
 
 
@@ -225,9 +227,9 @@ def display6():
     GPIO.output(E, False)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
 
 
 
@@ -251,9 +253,9 @@ def display7():
     GPIO.output(E, True)
     GPIO.output(F, True)
     GPIO.output(G, True)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
 
 
 
@@ -277,9 +279,9 @@ def display8():
     GPIO.output(E, False)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
 
 
 
@@ -303,6 +305,6 @@ def display9():
     GPIO.output(E, True)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
 
-    time.sleep(5)
+    time.sleep(3)
