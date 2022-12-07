@@ -1,6 +1,34 @@
 import RPi.GPIO as GPIO
 import time
 
+def main():
+
+    refresh()
+
+    check()
+
+    display0()
+
+    display1()
+
+    display2()
+
+    display3()
+
+    display4()
+
+    display5()
+
+    display6()
+
+    display7()
+
+    display8()
+
+    display9()
+
+
+    GPIO.cleanup()
 
 def setup():
 
