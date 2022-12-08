@@ -209,7 +209,7 @@ def take_photo()->str:
     # step3:
     # return the saving path
     
-    btn.detecting_and_shoot()
+    pic_path = btn.detecting_and_shoot("./UserData/Pictures")
     
-    ret = path
+    ret = pic_path
     return ret
