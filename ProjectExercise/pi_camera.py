@@ -42,6 +42,9 @@ def shoot(PATH) -> str:
 	pic_name = "pic_" + time + ".jpg"
 
 	camera = piC.PiCamera()
+
+	camera.rotation = 180
+	camera.resolution = (2592, 1944)
 	camera.capture(PATH + pic_name)
 	camera.close()
 
