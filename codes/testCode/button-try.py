@@ -22,7 +22,7 @@ def setup():
     GPIO.output(LedPin, False)
 
 
-def loop(ev = None):
+def loop(self):
 
     global Led_status
 
