@@ -4,7 +4,6 @@ import time
 
 def setup():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -25,11 +24,11 @@ def setup():
     GPIO.setup(F, GPIO.OUT)
     GPIO.setup(G, GPIO.OUT)
     GPIO.setup(DP, GPIO.OUT)
+    GPIO.output(DCC, True)
 
 
 def refresh():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -52,7 +51,6 @@ def refresh():
 
 def display0():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -62,7 +60,6 @@ def display0():
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -73,11 +70,8 @@ def display0():
     GPIO.output(DP, True)
 
 
-
-
 def display1():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -87,8 +81,6 @@ def display1():
     G = 29
     DP = 22
 
-
-    GPIO.output(DCC, True)
     GPIO.output(A, True)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -99,11 +91,8 @@ def display1():
     GPIO.output(DP, True)
 
 
-
-
 def display2():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -113,7 +102,6 @@ def display2():
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, True)
@@ -124,12 +112,8 @@ def display2():
     GPIO.output(DP, False)
 
 
-
-
-
 def display3():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -139,7 +123,6 @@ def display3():
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -150,12 +133,8 @@ def display3():
     GPIO.output(DP, False)
 
 
-
-
-
 def display4():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -165,7 +144,6 @@ def display4():
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
     GPIO.output(A, True)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -176,12 +154,8 @@ def display4():
     GPIO.output(DP, False)
 
 
-
-
-
 def display5():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -191,7 +165,6 @@ def display5():
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, True)
     GPIO.output(C, False)
@@ -202,12 +175,8 @@ def display5():
     GPIO.output(DP, False)
 
 
-
-
-
 def display6():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -217,7 +186,6 @@ def display6():
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, True)
     GPIO.output(C, False)
@@ -228,12 +196,8 @@ def display6():
     GPIO.output(DP, False)
 
 
-
-
-
 def display7():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -243,7 +207,6 @@ def display7():
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -254,12 +217,8 @@ def display7():
     GPIO.output(DP, False)
 
 
-
-
-
 def display8():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -269,7 +228,6 @@ def display8():
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -280,12 +238,8 @@ def display8():
     GPIO.output(DP, False)
 
 
-
-
-
 def display9():
 
-    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -295,7 +249,6 @@ def display9():
     G = 29
     DP = 22
 
-    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -304,5 +257,3 @@ def display9():
     GPIO.output(F, False)
     GPIO.output(G, False)
     GPIO.output(DP, False)
-
-
