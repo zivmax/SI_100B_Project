@@ -13,7 +13,7 @@ def main():
     loop()
 
 
-def setup(ev=None):
+def setup():
 
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(LedPin, GPIO.OUT)
@@ -21,7 +21,7 @@ def setup(ev=None):
     GPIO.output(LedPin, False)
 
 
-def swLed():
+def swLed(ev=None):
 
     global Led_status
 
@@ -45,7 +45,6 @@ def loop():
 
     while True:
         pass
-
 
 if __name__ == '__main__':     # Program start from here
 
