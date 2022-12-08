@@ -40,7 +40,8 @@ def swLed(ev=None):
 
 def loop():
 
-    GPIO.add_event_detect(BtnPin, GPIO.FALLING, calCLEARlback=swLed)
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING)
+    GPIO.add_event_callback(BtnPin, swLed)
 
     while True:
 
