@@ -31,23 +31,25 @@ def setup():
 
 
 def getRespose(ev=None):
-    print("get Respose 1")
+    print("Get Respose 1")
 
 
 def detecting():
 
     GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=getRespose, bouncetime=250)
 
-    print('start detecting for 4s')
+    print('Start detecting for 4s')
 
     while True:
 
         sleep(4)
         if GPIO.event_detected(BtnPin):
-            print("event detected")
+            print("Event detected\n")
+        else:
+            print("No event detected\n")
 
         sleep(1)
-        print("restart detecting for 4s")
+        print("Restart detecting for 4s")
 
 
 
