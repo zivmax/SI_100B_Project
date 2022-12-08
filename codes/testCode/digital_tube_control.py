@@ -42,7 +42,7 @@ def main():
 
 def setup():
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -67,7 +67,7 @@ def setup():
 
 def refresh(t = 0):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -98,7 +98,7 @@ def refresh(t = 0):
 
 def check(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -129,7 +129,7 @@ def check(t = 1):
 
 def display0(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -159,7 +159,7 @@ def display0(t = 1):
 
 def display1(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -189,7 +189,7 @@ def display1(t = 1):
 
 def display2(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -220,7 +220,7 @@ def display2(t = 1):
 
 def display3(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -251,7 +251,7 @@ def display3(t = 1):
 
 def display4(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -282,7 +282,7 @@ def display4(t = 1):
 
 def display5(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -313,7 +313,7 @@ def display5(t = 1):
 
 def display6(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -344,7 +344,7 @@ def display6(t = 1):
 
 def display7(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -375,7 +375,7 @@ def display7(t = 1):
 
 def display8(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -406,7 +406,7 @@ def display8(t = 1):
 
 def display9(t = 1):
 
-    DCC = 7
+    DCC = 32
     A = 11
     B = 12
     C = 13
