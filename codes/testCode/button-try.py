@@ -13,7 +13,7 @@ def main():
     loop()
 
 
-def setup():
+def setup(ev=None):
 
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(LedPin, GPIO.OUT)
