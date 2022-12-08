@@ -40,7 +40,7 @@ def main():
 
 def setup():
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -52,7 +52,7 @@ def setup():
 
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(DCC, GPIO.OUT)
+    GPIO.setup(VCC, GPIO.OUT)
     GPIO.setup(A, GPIO.OUT)
     GPIO.setup(B, GPIO.OUT)
     GPIO.setup(C, GPIO.OUT)
@@ -65,7 +65,7 @@ def setup():
 
 def refresh(t = 0):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -77,7 +77,7 @@ def refresh(t = 0):
 
     setup()
 
-    GPIO.output(DCC, False)
+    GPIO.output(VCC, False)
     GPIO.output(A, True)
     GPIO.output(B, True)
     GPIO.output(C, True)
@@ -96,7 +96,7 @@ def refresh(t = 0):
 
 def check(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -108,7 +108,7 @@ def check(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -127,7 +127,7 @@ def check(t = 1):
 
 def display0(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -139,7 +139,7 @@ def display0(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -157,7 +157,7 @@ def display0(t = 1):
 
 def display1(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -169,7 +169,7 @@ def display1(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, True)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -187,7 +187,7 @@ def display1(t = 1):
 
 def display2(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -199,7 +199,7 @@ def display2(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, True)
@@ -218,7 +218,7 @@ def display2(t = 1):
 
 def display3(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -230,7 +230,7 @@ def display3(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -249,7 +249,7 @@ def display3(t = 1):
 
 def display4(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -261,7 +261,7 @@ def display4(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, True)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -280,7 +280,7 @@ def display4(t = 1):
 
 def display5(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -292,7 +292,7 @@ def display5(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, False)
     GPIO.output(B, True)
     GPIO.output(C, False)
@@ -311,7 +311,7 @@ def display5(t = 1):
 
 def display6(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -323,7 +323,7 @@ def display6(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, False)
     GPIO.output(B, True)
     GPIO.output(C, False)
@@ -342,7 +342,7 @@ def display6(t = 1):
 
 def display7(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -354,7 +354,7 @@ def display7(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -373,7 +373,7 @@ def display7(t = 1):
 
 def display8(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -385,7 +385,7 @@ def display8(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -404,7 +404,7 @@ def display8(t = 1):
 
 def display9(t = 1):
 
-    DCC = 32
+    VCC = 32
     A = 11
     B = 12
     C = 13
@@ -416,7 +416,7 @@ def display9(t = 1):
 
     setup()
 
-    GPIO.output(DCC, True)
+    GPIO.output(VCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
