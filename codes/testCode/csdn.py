@@ -6,7 +6,7 @@ import time
 GPIO.setmode(GPIO.BOARD)
  
 # 设置引脚
-COM = 7
+COM = 32
 g = 29
 f = 18
 a = 11
