@@ -174,6 +174,7 @@ def led_display(numList:list)->None:
         elif i == 0:
             dtc.display0()
 
+    sleep(2)
 
     ret = None
     return ret
