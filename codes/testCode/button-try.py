@@ -1,19 +1,15 @@
 import RPi.GPIO as GPIO
 
 
-BtnPin = 12    # pin12 --- button
+BtnPin = 31
+LedPin = 33
 
 
 def setup():
 
-    GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
-
-    GPIO.setup(LedPin, GPIO.OUT)   # Set LedPin's mode is output
-
-    # Set BtnPin's mode is input, and pull up to high level(3.3V)
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(LedPin, GPIO.OUT)
     GPIO.setup(BtnPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
-
 
 def swLed(ev=None):
 
@@ -50,5 +46,5 @@ if __name__ == '__main__':     # Program start from here
 
     try:
         loop()
-    except KeyboardInterrupt:   # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+    except KeyboardInterrupt:
         destroy()

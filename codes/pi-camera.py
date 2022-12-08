@@ -33,5 +33,25 @@ def shoot_custom():
 
 	camera.close()
 
+
+def shoot(PATH) -> str:
+	time = tm.strftime("%Y-%m-%d_%H-%M-%S", tm.localtime())
+
+	cF.mkdir(PATH)
+
+	pic_name = "pic_" + time + ".jpg"
+
+	camera = piC.PiCamera()
+	camera.capture(PATH + pic_name)
+	camera.close()
+
+	path = PATH + pic_name
+	return path
+
+
 if __name__ == "__main__":
-	main()
+
+    try:
+        main()
+    except KeyboardInterrupt:
+        exit()
