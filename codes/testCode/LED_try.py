@@ -14,4 +14,4 @@ try:
 
 except KeyboardInterrupt:
     GPIO.cleanup()
-    print("\n")
+    print("")
