@@ -36,16 +36,17 @@ def getRespose(ev=None):
 
 def detecting():
 
-    GPIO.add_event_detect(BtnPin, GPIO.FALLING)
-    GPIO.add_event_callback(BtnPin, getRespose)
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=getRespose, bouncetime=250)
 
     print('start detecting for 4s')
 
     while True:
+
+        sleep(4)
         if GPIO.event_detected(BtnPin):
             print("event detected")
 
-        sleep(4)
+        sleep(1)
         print("restart detecting for 4s")
 
 
