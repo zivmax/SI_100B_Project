@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from time import sleep
+
 
 LedPin = 33
 
@@ -14,3 +14,4 @@ try:
 
 except KeyboardInterrupt:
     GPIO.cleanup()
+    print("\n")
