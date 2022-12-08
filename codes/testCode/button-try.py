@@ -22,7 +22,7 @@ def setup():
     GPIO.output(LedPin, False)
 
 
-def swLed(ev=None):
+def loop():
 
     global Led_status
 
@@ -36,18 +36,12 @@ def swLed(ev=None):
 
     else:
 
-    	print('LED On')
-
-
-def loop():
-
-    GPIO.add_event_detect(BtnPin, GPIO.FALLING)
-    GPIO.add_event_callback(BtnPin, swLed)
+        print('LED On')
 
     while True:
         time.sleep(1)
 
-if __name__ == '__main__':     # Program start from here
+if __name__ == '__main__':
 
     try:
         main()
