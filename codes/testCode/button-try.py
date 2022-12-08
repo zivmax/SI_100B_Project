@@ -22,25 +22,24 @@ def setup():
     GPIO.output(LedPin, False)
 
 
-def loop(self):
+def swLED(self):
 
     global Led_status
+    Led_status = not Led_status
+
+    GPIO.output(LedPin, Led_status)
+
+    if Led_status == False:
+        print('LED Off')
+
+    else:
+        print('LED On')
+
+
+def loop():
 
     GPIO.add_event_detect(BtnPin, GPIO.FALLING)
-
-    if GPIO.event_detected(BtnPin):
-
-        Led_status = not Led_status
-
-        GPIO.output(LedPin, Led_status)
-
-        if Led_status == False:
-
-            print('LED Off')
-
-        else:
-
-            print('LED On')
+    GPIO.add_event_callback(BtnPin, swLED)
 
     while True:
         time.sleep(1)
