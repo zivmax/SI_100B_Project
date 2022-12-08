@@ -38,6 +38,9 @@ def loop():
 
         print('LED On')
 
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING)
+    GPIO.add_event_callback(BtnPin, loop)
+
     while True:
         time.sleep(1)
 
