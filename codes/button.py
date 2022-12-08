@@ -1,41 +1,32 @@
 import RPi.GPIO as GPIO
 from time import sleep
-
+import pi_camera as pc
 
 def main():
 
     setup()
 
-    detecting()
-
-
-
+    detecting_test()
 
 
 def setup():
-
     global BtnPin
     BtnPin = 31
 
-    global LedPin
-    LedPin = 33
-
-    global Led_status
-    Led_status = False
-
-
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(LedPin, GPIO.OUT)
     GPIO.setup(BtnPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.output(LedPin, False)
 
+
+def detecting_and_shoot(PATH):
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=pc.shoot(PATH), bouncetime=250)
+    while True:
+        sleep(1)
 
 def getRespose(ev=None):
     print("Get Respose 1")
 
 
-def detecting():
-
+def detecting_test():
     GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=getRespose, bouncetime=250)
 
     print('Start detecting for 4s')
@@ -54,7 +45,6 @@ def detecting():
 
 
 if __name__ == '__main__':
-
     try:
         main()
     except KeyboardInterrupt:
