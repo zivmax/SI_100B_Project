@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import time
 
 
 BtnPin = 31
@@ -44,7 +45,7 @@ def loop():
     GPIO.add_event_callback(BtnPin, swLed)
 
     while True:
-        pass
+        time.sleep(1)
 
 if __name__ == '__main__':     # Program start from here
 
