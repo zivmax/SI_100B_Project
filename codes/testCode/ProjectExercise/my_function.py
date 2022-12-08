@@ -203,7 +203,6 @@ def take_photo()->str:
     #set a GPIO as an input channel for detecting
     btn.setup()
 
-    global camera
     camera = pc.setup()
 
     # step 2: 
@@ -211,6 +210,7 @@ def take_photo()->str:
     # recorder the saving path
     # clear the camera
     camera.start_preview()
+    print("Camera activated")
     if btn.detecting():
         pic_path = pc.shoot("./UserData/Pictures/")
     
