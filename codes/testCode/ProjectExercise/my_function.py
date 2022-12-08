@@ -201,8 +201,10 @@ def take_photo()->str:
     # step 1: 
     #set a GPIO as an input channel for detecting
     btn.setup()
+
+    global camera
     camera = pc.setup()
-    
+
     # step 2: 
     # create the camera obj and wait for a button to take a photo
     # recorder the saving path
