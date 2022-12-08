@@ -56,7 +56,7 @@ def main():
     time.sleep(2)
 
 
-
+    GPIO.cleanup()
 
 
 if __name__ == "__main__":
