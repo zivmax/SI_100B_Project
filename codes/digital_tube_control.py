@@ -4,6 +4,7 @@ import time
 
 def setup():
 
+    DCC = 7
     A = 11
     B = 12
     C = 13
@@ -29,6 +30,7 @@ def setup():
 
 def refresh():
 
+    DCC = 7
     A = 11
     B = 12
     C = 13
