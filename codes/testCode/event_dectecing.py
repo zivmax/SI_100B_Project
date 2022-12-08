@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
-import time
+from time import sleep
+
 
 BtnPin = 31
 
@@ -18,8 +19,9 @@ GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=getRespose, )
 print('start detecting for 4s')
 
 while True:
+    sleep(4)
+
     if GPIO.event_detected(BtnPin):
         print("event detected")
 
-    time.sleep(4)
     print("restart detecting for 4s")
