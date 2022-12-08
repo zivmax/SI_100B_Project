@@ -49,6 +49,8 @@ def shoot(PATH) -> str:
 
 	pic_name = "pic_" + time + ".jpg"
 
+	camera = setup()
+
 	camera.capture(PATH + pic_name)
 	camera.close()
 
