@@ -1,6 +1,42 @@
 import RPi.GPIO as GPIO
 import time
 
+def main():
+
+
+
+    check()
+
+
+    display0()
+
+
+    display1()
+
+
+    display2()
+
+
+    display3()
+
+
+    display4()
+
+
+    display5()
+
+
+    display6()
+
+
+    display7()
+
+
+    display8()
+
+
+    display9()
+
 
 def setup():
 
@@ -25,10 +61,9 @@ def setup():
     GPIO.setup(F, GPIO.OUT)
     GPIO.setup(G, GPIO.OUT)
     GPIO.setup(DP, GPIO.OUT)
-    GPIO.output(DCC, True)
 
 
-def refresh():
+def refresh(t = 0):
 
     DCC = 32
     A = 11
@@ -40,6 +75,8 @@ def refresh():
     G = 29
     DP = 22
 
+    setup()
+
     GPIO.output(DCC, False)
     GPIO.output(A, True)
     GPIO.output(B, True)
@@ -50,9 +87,16 @@ def refresh():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
+    time.sleep(t)
 
-def display0():
+    GPIO.cleanup()
+    
 
+
+
+def check(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -62,6 +106,40 @@ def display0():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
+    GPIO.output(A, False)
+    GPIO.output(B, False)
+    GPIO.output(C, False)
+    GPIO.output(D, False)
+    GPIO.output(E, False)
+    GPIO.output(F, False)
+    GPIO.output(G, False)
+    GPIO.output(DP, False)
+
+    time.sleep(t)
+
+    GPIO.cleanup()
+    
+
+
+
+def display0(t = 1):
+
+    DCC = 32
+    A = 11
+    B = 12
+    C = 13
+    D = 15
+    E = 16
+    F = 18
+    G = 29
+    DP = 22
+
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -71,9 +149,15 @@ def display0():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
+    time.sleep(t)
 
-def display1():
+    GPIO.cleanup()
+    
 
+
+def display1(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -83,6 +167,9 @@ def display1():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, True)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -92,9 +179,15 @@ def display1():
     GPIO.output(G, True)
     GPIO.output(DP, True)
 
+    time.sleep(t)
 
-def display2():
+    GPIO.cleanup()
+    
 
+
+def display2(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -104,6 +197,9 @@ def display2():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, True)
@@ -111,11 +207,18 @@ def display2():
     GPIO.output(E, False)
     GPIO.output(F, True)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
+
+    time.sleep(t)
+
+    GPIO.cleanup()
+    
 
 
-def display3():
 
+def display3(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -125,6 +228,9 @@ def display3():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -132,11 +238,18 @@ def display3():
     GPIO.output(E, True)
     GPIO.output(F, True)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
+
+    time.sleep(t)
+
+    GPIO.cleanup()
+    
 
 
-def display4():
 
+def display4(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -146,6 +259,9 @@ def display4():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, True)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -153,11 +269,18 @@ def display4():
     GPIO.output(E, True)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
+
+    time.sleep(t)
+
+    GPIO.cleanup()
+    
 
 
-def display5():
 
+def display5(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -167,6 +290,9 @@ def display5():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, True)
     GPIO.output(C, False)
@@ -174,11 +300,18 @@ def display5():
     GPIO.output(E, True)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
+
+    time.sleep(t)
+
+    GPIO.cleanup()
+    
 
 
-def display6():
 
+def display6(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -188,6 +321,9 @@ def display6():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, True)
     GPIO.output(C, False)
@@ -195,11 +331,18 @@ def display6():
     GPIO.output(E, False)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
+
+    time.sleep(t)
+
+    GPIO.cleanup()
+    
 
 
-def display7():
 
+def display7(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -209,6 +352,9 @@ def display7():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -216,11 +362,18 @@ def display7():
     GPIO.output(E, True)
     GPIO.output(F, True)
     GPIO.output(G, True)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
+
+    time.sleep(t)
+
+    GPIO.cleanup()
+    
 
 
-def display8():
 
+def display8(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -230,6 +383,9 @@ def display8():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -237,11 +393,18 @@ def display8():
     GPIO.output(E, False)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
+
+    time.sleep(t)
+
+    GPIO.cleanup()
+    
 
 
-def display9():
 
+def display9(t = 1):
+
+    DCC = 32
     A = 11
     B = 12
     C = 13
@@ -251,6 +414,9 @@ def display9():
     G = 29
     DP = 22
 
+    setup()
+
+    GPIO.output(DCC, True)
     GPIO.output(A, False)
     GPIO.output(B, False)
     GPIO.output(C, False)
@@ -258,4 +424,12 @@ def display9():
     GPIO.output(E, True)
     GPIO.output(F, False)
     GPIO.output(G, False)
-    GPIO.output(DP, False)
+    GPIO.output(DP, True)
+
+    time.sleep(t)
+
+    GPIO.cleanup()
+
+
+if __name__ == "__main__":
+    main()
