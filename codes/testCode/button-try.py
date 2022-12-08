@@ -28,21 +28,22 @@ def loop(ev = None):
 
     GPIO.add_event_detect(BtnPin, GPIO.FALLING)
 
+    if GPIO.event_detected(BtnPin):
+
+        Led_status = not Led_status
+
+        GPIO.output(LedPin, Led_status)
+
+        if Led_status == False:
+
+            print('LED Off')
+
+        else:
+
+            print('LED On')
+
     while True:
-
-        if GPIO.event_detected(BtnPin):
-
-            Led_status = not Led_status
-
-            GPIO.output(LedPin, Led_status)
-
-            if Led_status == False:
-
-                print('LED Off')
-
-            else:
-
-                print('LED On')
+        time.sleep(1)
 
 if __name__ == '__main__':
 
