@@ -10,7 +10,6 @@ def main():
 def setup():
 
 	camera = piC.PiCamera()
-	camera.brightness = 100
 	camera.contrast = 100
 
 	return camera
