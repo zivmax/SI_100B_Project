@@ -3,6 +3,8 @@ import os
 import numpy as np
 from time import sleep
 import time
+import digital_tube_control as dtc
+
 
 # GPIO related
 import RPi.GPIO as GPIO
@@ -134,29 +136,45 @@ def led_display(numList:list)->None:
     """
 
     ### write your codes here ###
-    #############################87----    # step 1:
+    #############################87----    
+
+    # step 1:
     # Clarify the relationship between led pins and GPIO pins
     # Set the GPIO pins to GPIO.OUT mode and give them the right output
-    
-    
-    
-    
-    
+
+
     # step 2:
     # Clarify the led composition of each number
     
-    
-    
-    
-        
+
     # step 3:
     # Display the numbers in the list one by one
     # Display every number for 1 second
     # Wait two seconds when displaying different lines
     
-    
-    
-    
+    for i in numList:
+        if i == 1:
+            dtc.display1()
+        elif i == 2:
+            dtc.display2()
+        elif i == 3:
+            dtc.display3()
+        elif i == 4:
+            dtc.display4()
+        elif i == 5:
+            dtc.display5()
+        elif i == 6:
+            dtc.display6()
+        elif i == 7:
+            dtc.display7()
+        elif i == 8:
+            dtc.display8()
+        elif i == 9:
+            dtc.display9()
+        elif i == 0:
+            dtc.display0()
+
+
     ret = None
     return ret
 
