@@ -2,10 +2,6 @@ import RPi.GPIO as GPIO
 import time
 
 
-BtnPin = 31
-LedPin = 33
-Led_status = False
-
 
 def main():
 
@@ -15,6 +11,17 @@ def main():
 
 
 def setup():
+
+
+    global BtnPin
+    BtnPin = 31
+
+    global LedPin
+    LedPin = 33
+
+    global Led_status
+    Led_status = False
+
 
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(LedPin, GPIO.OUT)
@@ -38,11 +45,11 @@ def swLED(self):
 
 def loop():
 
-    GPIO.add_event_detect(BtnPin, GPIO.FALLING)
-    GPIO.add_event_callback(BtnPin, swLED, bouncetime = 250)
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback = swLED, bouncetime = 250)
 
     while True:
         time.sleep(1)
+
 
 if __name__ == '__main__':
 
