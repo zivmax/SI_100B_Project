@@ -38,7 +38,7 @@ def swLED(self):
 
 def loop():
 
-    GPIO.add_event_detect(BtnPin, GPIO.FALLING)
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING, bouncetime = 250)
     GPIO.add_event_callback(BtnPin, swLED)
 
     while True:
