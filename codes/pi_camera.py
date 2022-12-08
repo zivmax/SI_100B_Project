@@ -7,6 +7,14 @@ def main():
 	shoot_auto()
 	shoot_custom()
 
+def setup():
+
+	camera = piC.PiCamera()
+	camera.brightness = 100
+	camera.contrast = 100
+
+	return camera
+
 
 def shoot_auto():
 	path = "/home/pi/projectPictures/"
@@ -41,7 +49,6 @@ def shoot(PATH) -> str:
 
 	pic_name = "pic_" + time + ".jpg"
 
-	camera = piC.PiCamera()
 	camera.capture(PATH + pic_name)
 	camera.close()
 
