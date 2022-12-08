@@ -41,7 +41,7 @@ def shoot_custom():
 	camera.close()
 
 
-def shoot(PATH) -> str:
+def shoot(camera, PATH) -> str:
 	time = tm.strftime("%Y-%m-%d_%H-%M-%S", tm.localtime())
 
 	cF.mkdir(PATH)

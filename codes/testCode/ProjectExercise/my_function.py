@@ -212,7 +212,7 @@ def take_photo()->str:
     camera.start_preview()
     print("Camera activated")
     if btn.detecting():
-        pic_path = pc.shoot("./UserData/Pictures/")
+        pic_path = pc.shoot(camera, "./UserData/Pictures/")
     
     # step3:
     # return the saving path
