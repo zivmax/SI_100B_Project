@@ -30,7 +30,7 @@ def loop(ev = None):
 
     while True:
 
-        if GPIO.event_detect(BtnPin):
+        if GPIO.event_detected(BtnPin):
 
             Led_status = not Led_status
 
