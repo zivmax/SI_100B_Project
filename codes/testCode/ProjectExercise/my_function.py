@@ -6,6 +6,7 @@ import time
 import digital_tube_control as dtc
 import button as btn
 import pi_camera as pc
+import picamera as piC
 
 
 # GPIO related

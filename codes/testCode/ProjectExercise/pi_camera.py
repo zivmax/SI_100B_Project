@@ -7,7 +7,7 @@ def main():
 	shoot_auto()
 	shoot_custom()
 
-def setup():
+def setup(camera):
 
 	camera = piC.PiCamera()
 	camera.brightness = 100
