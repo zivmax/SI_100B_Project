@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import time
+from time import sleep
 
 
 def main():
@@ -7,6 +7,9 @@ def main():
     setup()
 
     detecting()
+
+
+
 
 
 def setup():
@@ -27,26 +30,24 @@ def setup():
     GPIO.output(LedPin, False)
 
 
-def swLED(ev=None):
-
-    global Led_status
-    Led_status = not Led_status
-
-    GPIO.output(LedPin, Led_status)
-
-    if Led_status == False:
-        print('LED Off')
-
-    else:
-        print('LED On')
+def getRespose(ev=None):
+    print("get Respose 1")
 
 
 def detecting():
 
-    GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=swLED, bouncetime=250)
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING)
+    GPIO.add_event_callback(BtnPin, getRespose)
+
+    print('start detecting for 4s')
 
     while True:
-        time.sleep(1)
+        if GPIO.event_detected(BtnPin):
+            print("event detected")
+
+        sleep(4)
+        print("restart detecting for 4s")
+
 
 
 if __name__ == '__main__':

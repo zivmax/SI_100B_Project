@@ -88,7 +88,7 @@ def refresh(t = 0):
     GPIO.cleanup()
     
 
-def check(t = 1):
+def check(t=1):
 
     setup()
 
@@ -107,7 +107,7 @@ def check(t = 1):
     GPIO.cleanup()
     
 
-def display0(t = 1):
+def display0(t=1):
 
     setup()
 
@@ -125,7 +125,7 @@ def display0(t = 1):
 
     GPIO.cleanup()
     
-def display1(t = 1):
+def display1(t=1):
 
     setup()
 
@@ -144,7 +144,7 @@ def display1(t = 1):
     GPIO.cleanup()
 
 
-def display2(t = 1):
+def display2(t=1):
 
     setup()
 
@@ -163,7 +163,7 @@ def display2(t = 1):
     GPIO.cleanup()
     
 
-def display3(t = 1):
+def display3(t=1):
 
     setup()
 
@@ -182,7 +182,7 @@ def display3(t = 1):
     GPIO.cleanup()
     
 
-def display4(t = 1):
+def display4(t=1):
 
     setup()
 
@@ -201,7 +201,7 @@ def display4(t = 1):
     GPIO.cleanup()
     
 
-def display5(t = 1):
+def display5(t=1):
 
     setup()
 
@@ -220,7 +220,7 @@ def display5(t = 1):
     GPIO.cleanup()
     
 
-def display6(t = 1):
+def display6(t=1):
 
     setup()
 
@@ -239,7 +239,7 @@ def display6(t = 1):
     GPIO.cleanup()
     
 
-def display7(t = 1):
+def display7(t=1):
 
     setup()
 
@@ -258,7 +258,7 @@ def display7(t = 1):
     GPIO.cleanup()
     
 
-def display8(t = 1):
+def display8(t=1):
 
     setup()
 
@@ -277,7 +277,7 @@ def display8(t = 1):
     GPIO.cleanup()
     
 
-def display9(t = 1):
+def display9(t=1):
 
     setup()
 
