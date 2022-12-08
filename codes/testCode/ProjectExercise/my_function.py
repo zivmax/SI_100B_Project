@@ -5,6 +5,7 @@ from time import sleep
 import time
 import digital_tube_control as dtc
 import button as btn
+import pi_camera as pc
 
 
 # GPIO related
@@ -200,16 +201,19 @@ def take_photo()->str:
     # step 1: 
     #set a GPIO as an input channel for detecting
     btn.setup()
-
+    camera = pc.setup()
+    
     # step 2: 
     # create the camera obj and wait for a button to take a photo
     # recorder the saving path
     # clear the camera
+    camera = pc.setup()
+    camera.start_preview()
+    if btn.detecting():
+        pic_path = pc.shoot("./UserData/Pictures/")
     
     # step3:
     # return the saving path
-    
-    pic_path = btn.detecting_and_shoot("./UserData/Pictures/")
-    
+
     ret = pic_path
     return ret

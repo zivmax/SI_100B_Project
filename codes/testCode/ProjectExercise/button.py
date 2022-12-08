@@ -17,17 +17,12 @@ def setup():
     GPIO.setup(BtnPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
-def detecting_and_shoot(PATH):
+def detecting():
     GPIO.add_event_detect(BtnPin, GPIO.FALLING, bouncetime=250)
-
-    camera = pc.setup()
-    camera.start_preview()
 
     while True:
         if GPIO.event_detected(BtnPin):
-            path = pc.shoot(PATH)
-
-            return path
+            return True
 
 
 def getRespose(ev=None):
