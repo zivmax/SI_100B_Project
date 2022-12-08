@@ -24,6 +24,8 @@ def setup(ev=None):
 
 def loop():
 
+
+
     global Led_status
 
     Led_status = not Led_status
@@ -38,7 +40,8 @@ def loop():
 
         print('LED On')
 
-    GPIO.add_event_detect(BtnPin, GPIO.FALLING, loop)
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING)
+    GPIO.add_event_callback(BtnPin, loop)
 
     while True:
         time.sleep(1)
