@@ -29,14 +29,31 @@ def main():
 
 def setup():
 
+    global VCC
     VCC = 32
+
+    global A
     A = 11
+
+    global B
     B = 12
+
+    global C
     C = 13
+
+    global D
     D = 15
+
+    global E
     E = 16
+
+    global F
     F = 18
+
+    global G
     G = 29
+    
+    global DP
     DP = 22
 
     GPIO.setwarnings(False)
@@ -53,16 +70,6 @@ def setup():
 
 
 def refresh(t = 0):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -81,19 +88,7 @@ def refresh(t = 0):
     GPIO.cleanup()
     
 
-
-
 def check(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -112,19 +107,7 @@ def check(t = 1):
     GPIO.cleanup()
     
 
-
-
 def display0(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -142,19 +125,7 @@ def display0(t = 1):
 
     GPIO.cleanup()
     
-
-
 def display1(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -171,20 +142,9 @@ def display1(t = 1):
     time.sleep(t)
 
     GPIO.cleanup()
-    
 
 
 def display2(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -203,19 +163,7 @@ def display2(t = 1):
     GPIO.cleanup()
     
 
-
-
 def display3(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -234,19 +182,7 @@ def display3(t = 1):
     GPIO.cleanup()
     
 
-
-
 def display4(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -265,19 +201,7 @@ def display4(t = 1):
     GPIO.cleanup()
     
 
-
-
 def display5(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -296,19 +220,7 @@ def display5(t = 1):
     GPIO.cleanup()
     
 
-
-
 def display6(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -327,19 +239,7 @@ def display6(t = 1):
     GPIO.cleanup()
     
 
-
-
 def display7(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -358,19 +258,7 @@ def display7(t = 1):
     GPIO.cleanup()
     
 
-
-
 def display8(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -389,19 +277,7 @@ def display8(t = 1):
     GPIO.cleanup()
     
 
-
-
 def display9(t = 1):
-
-    VCC = 32
-    A = 11
-    B = 12
-    C = 13
-    D = 15
-    E = 16
-    F = 18
-    G = 29
-    DP = 22
 
     setup()
 
@@ -421,4 +297,8 @@ def display9(t = 1):
 
 
 if __name__ == "__main__":
-    main()
+
+    try:
+        main()
+    except KeyboardInterrupt:
+        GPIO.cleanup()
