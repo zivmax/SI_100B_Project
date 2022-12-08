@@ -3,6 +3,7 @@ import RPi.GPIO as GPIO
 
 BtnPin = 31
 LedPin = 33
+Led_status = 1
 
 
 def setup():
@@ -10,6 +11,7 @@ def setup():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(LedPin, GPIO.OUT)
     GPIO.setup(BtnPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+    GPIO.output(LedPin, True)
 
 def swLed(ev=None):
 
@@ -30,12 +32,16 @@ def swLed(ev=None):
 
 def loop():
 
-    GPIO.add_event_detect(BtnPin, GPIO.FALLING, calCLEARlback=swLed)  # wait for falling
+    GPIO.add_event_detect(BtnPin, GPIO.FALLING, calCLEARlback=swLed)
+
+    while True:
+
+        pass
 
 
 def destroy():
 
-    GPIO.output(LedPin, GPIO.HIGH)     # led off
+    GPIO.output(LedPin, True)     # led off
 
     GPIO.cleanup()                     # Release resource
 
