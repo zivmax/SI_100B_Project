@@ -2,7 +2,6 @@ import RPi.GPIO as GPIO
 import time
 
 
-
 def main():
 
     setup()
@@ -11,7 +10,6 @@ def main():
 
 
 def setup():
-
 
     global BtnPin
     BtnPin = 31
