@@ -10,7 +10,9 @@ def main():
 def setup():
 
 	camera = piC.PiCamera()
-	camera.contrast = 100
+	camera.resolution = (2592, 1944)
+	camera.awb_mode = 'auto'
+	camera.exposure_compensation = 20
 
 	return camera
 
