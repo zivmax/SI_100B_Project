@@ -210,7 +210,6 @@ def take_photo()->str:
     # create the camera obj and wait for a button to take a photo
     # recorder the saving path
     # clear the camera
-    camera = pc.setup()
     camera.start_preview()
     if btn.detecting():
         pic_path = pc.shoot("./UserData/Pictures/")
