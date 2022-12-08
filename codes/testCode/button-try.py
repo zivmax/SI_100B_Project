@@ -44,7 +44,6 @@ def loop():
     GPIO.add_event_callback(BtnPin, swLed)
 
     while True:
-
         pass
 
 
