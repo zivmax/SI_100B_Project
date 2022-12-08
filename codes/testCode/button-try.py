@@ -21,7 +21,7 @@ def setup():
     GPIO.output(LedPin, False)
 
 
-def swLed(ev=None):
+def swLed():
 
     global Led_status
 
