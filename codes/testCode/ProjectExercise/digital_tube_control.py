@@ -30,31 +30,31 @@ def main():
 def setup():
 
     global VCC
-    VCC = 32
+    VCC = 32 # connect to 3 or 8 on LED
 
     global A
-    A = 11
+    A = 11 # connect to 7 on LED
 
     global B
-    B = 12
+    B = 12 # connect to 6 on LED
 
     global C
-    C = 13
+    C = 13 # connect to 4 on LED
 
     global D
-    D = 15
+    D = 15 # connect to 2 on LED
 
     global E
-    E = 16
+    E = 16 # connect to 1 on LED
 
     global F
-    F = 18
+    F = 18 # connect to 9 on LED
 
     global G
-    G = 29
+    G = 29 # connect to 10 on LED
 
     global DP
-    DP = 22
+    DP = 22 # connect to 5 on LED
 
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BOARD)
