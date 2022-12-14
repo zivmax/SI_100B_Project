@@ -52,7 +52,7 @@ def setup():
 
     global G
     G = 29
-    
+
     global DP
     DP = 22
 
@@ -86,7 +86,7 @@ def refresh(t = 0):
     time.sleep(t)
 
     GPIO.cleanup()
-    
+
 
 def check(t=1):
 

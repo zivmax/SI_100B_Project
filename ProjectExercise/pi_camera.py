@@ -1,16 +1,42 @@
 import picamera as piC
 import createFolder as cF
-import time as tm
+import time
 
 
-def main():
-	shoot_auto()
-	shoot_custom()
+def setup():
+
+	camera = piC.PiCamera()
+	camera.video_stabilization = True
+	camera.resolution = (2500, 800)
+	camera.brightness = 30
+	camera.image_effect = 'denoise'
+	camera.meter_mode = 'matrix'
+	camera.awb_mode = 'flash'
+	camera.exposure_compensation = 12
+	camera.exposure_mode = 'auto'
+
+	return camera
+
+
+def shoot(camera, folder_PATH) -> str:
+	time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())  # get the local time
+
+	cF.mkdir(folder_PATH)  # detect the folder path, if doesn't exist, it will be created
+
+	pic_name = "pic_" + time + ".png"  # get the name of the picture, the name contains the time when it is taken,
+					   # picture format is png
+
+	pic_PATH = folder_PATH + pic_name  # combine the pic-name and folder-path to get the pic-path
+
+	camera.capture(pic_PATH)  # take shoot and save pic in the pic-path
+	camera.close()  # clear camera
+
+	return pic_PATH
 
 
 def shoot_auto():
 	path = "/home/pi/projectPictures/"
-	time = tm.strftime("%Y-%m-%d_%H-%M-%S", tm.localtime())
+	time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
 
 	cF.mkdir(path)
 
@@ -34,22 +60,10 @@ def shoot_custom():
 	camera.close()
 
 
-def shoot(PATH) -> str:
-	time = tm.strftime("%Y-%m-%d_%H-%M-%S", tm.localtime())
+def main():
+	shoot_auto()
 
-	cF.mkdir(PATH)
-
-	pic_name = "pic_" + time + ".jpg"
-
-	camera = piC.PiCamera()
-
-	camera.rotation = 180
-	camera.resolution = (2592, 1944)
-	camera.capture(PATH + pic_name)
-	camera.close()
-
-	path = PATH + pic_name
-	return path
+	shoot_custom()
 
 
 if __name__ == "__main__":

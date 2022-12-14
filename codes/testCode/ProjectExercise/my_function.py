@@ -177,7 +177,6 @@ def led_display(numList:list)->None:
         elif i == 0:
             dtc.display0()
 
-    sleep(2)
 
     ret = None
     return ret
@@ -216,6 +215,6 @@ def take_photo()->str:
     
     # step3:
     # return the saving path
-
+    GPIO.cleanup()
     ret = pic_path
     return ret

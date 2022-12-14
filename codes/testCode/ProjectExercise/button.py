@@ -2,12 +2,6 @@ import RPi.GPIO as GPIO
 from time import sleep
 import pi_camera as pc
 
-def main():
-
-    setup()
-
-    detecting_test()
-
 
 def setup():
     global BtnPin
@@ -29,7 +23,7 @@ def getRespose(ev=None):
     print("Get Respose 1")
 
 
-def detecting_test():
+def event_detect():
     GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=getRespose, bouncetime=250)
 
     print('Start detecting for 4s')
@@ -43,8 +37,16 @@ def detecting_test():
             print("No event detected\n")
 
         sleep(1)
-        print("Restart detecting for 4s")
+	GPIO.remove_event_detect(BtnPin)
+	GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=getRespose, bouncetime=250)
+        print("Restart detecting for GPIO.remove_event_detect(channel)4s")
 
+
+def main():
+
+    setup()
+
+    event_detect()
 
 
 if __name__ == '__main__':
