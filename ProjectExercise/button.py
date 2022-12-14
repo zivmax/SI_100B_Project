@@ -37,8 +37,8 @@ def event_detect():
             print("No event detected\n")
 
         sleep(1)
-	GPIO.remove_event_detect(BtnPin)
-	GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=getRespose, bouncetime=250)
+        GPIO.remove_event_detect(BtnPin)
+        GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=getRespose, bouncetime=250)
         print("Restart detecting for GPIO.remove_event_detect(channel)4s")
 
 
