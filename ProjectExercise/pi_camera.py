@@ -6,19 +6,25 @@ import time
 def setup():
 
 	camera = piC.PiCamera()
-	camera.video_stabilization = True
-	camera.resolution = (2500, 800)
-	camera.brightness = 30
-	camera.image_effect = 'denoise'
-	camera.meter_mode = 'matrix'
-	camera.awb_mode = 'flash'
-	camera.exposure_compensation = 12
+	camera.rotation = 0
+	camera.saturation = 0
+	camera.contrast = 0
+	camera.video_stabilization = False
+	camera.resolution = (2500, 600)
+	camera.iso = 0
+	camera.brightness = 40
+	camera.image_effect = 'colorbalance'
+	camera.meter_mode = 'average'
+	camera.awb_mode = 'auto'
+	camera.exposure_compensation = 4
 	camera.exposure_mode = 'auto'
 
 	return camera
 
 
 def shoot(camera, folder_PATH) -> str:
+	import time
+	
 	time = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())  # get the local time
 
 	cF.mkdir(folder_PATH)  # detect the folder path, if doesn't exist, it will be created
