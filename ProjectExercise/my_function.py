@@ -108,10 +108,10 @@ def image_split_row(a)->list:
     n = 1
     while n < width - 2:
         n += 1
-        if startList[n] > 0.005 * white_max:
+        if startList[n] > 0.01 * white_max:
             start = n
             for m in range(start + 1, width - 1):
-                if endList[m] > 0.995 * black_max: 
+                if endList[m] > 0.99 * black_max: 
                     end = m
                     break
                 else:

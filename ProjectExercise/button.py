@@ -13,7 +13,6 @@ def setup():
 
 def detecting():
     GPIO.add_event_detect(BtnPin, GPIO.FALLING, bouncetime=250)
-
     while True:
         if GPIO.event_detected(BtnPin):
             return True
@@ -39,7 +38,7 @@ def event_detect():
         sleep(1)
         GPIO.remove_event_detect(BtnPin)
         GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=getRespose, bouncetime=250)
-        print("Restart detecting for 4s")
+        print("Restart detecting for GPIO.remove_event_detect(channel)4s")
 
 
 def main():

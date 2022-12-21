@@ -10,13 +10,13 @@ def setup():
 	camera.saturation = 0
 	camera.contrast = 0
 	camera.video_stabilization = False
-	camera.resolution = (2500, 600)
+	camera.resolution = (2592, 400)
 	camera.iso = 0
-	camera.brightness = 40
+	camera.brightness = 50
 	camera.image_effect = 'colorbalance'
 	camera.meter_mode = 'average'
 	camera.awb_mode = 'auto'
-	camera.exposure_compensation = 4
+	camera.exposure_compensation = 0
 	camera.exposure_mode = 'auto'
 
 	return camera
