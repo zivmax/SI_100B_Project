@@ -1,6 +1,6 @@
 # Handwritten Number Recognition  
 
-This project is an assginment from SI100B(<u>_Shanghaitech University_</u>).
+This project is SI100B(<u>_Shanghaitech University_</u>).
 
 * * *
 
